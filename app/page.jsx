@@ -81,9 +81,7 @@ const Home = () => {
                     <>
                         <div className='text-center'>
                             <div className='flex flex-col item-center w-full gap-y-5 mt-5'>
-                                <div className='flex item-center w-[200px]'>
-                                    <Image weatherData={weatherData}/>
-                                </div>
+                                <Image weatherData={weatherData} />
 
                                 <div className='text-white'>
                                     {weatherData?.weather[0]?.description?.toUpperCase()}

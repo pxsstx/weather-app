@@ -2,43 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #050505 ;
+body {
+  background-color: #050505;
 }
 
 .weatherIconContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weatherIcon {
+  fill: #fff;
+  transition: all 0.3s ease; /* Optional: Add a smooth transition effect */
+
+  /* Set initial size */
+  width: 200px;
+  height: 200px;
+}
+
+/* Add media queries for responsive sizing */
+@media (max-width: 768px) {
   .weatherIcon {
-    fill: #fff;
-    transition: all 0.3s ease; /* Optional: Add a smooth transition effect */
-  
-    /* Set initial size */
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
   }
-  
-  /* Add media queries for responsive sizing */
-  @media (max-width: 768px) {
-    .weatherIcon {
-      width: 150px;
-      height: 150px;
-    }
+}
+
+@media (max-width: 480px) {
+  .weatherIcon {
+    width: 100px;
+    height: 100px;
   }
-  
-  @media (max-width: 480px) {
-    .weatherIcon {
-      width: 100px;
-      height: 100px;
-    }
-  }
-  
+}
