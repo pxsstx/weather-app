@@ -106,7 +106,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="mt-4 flex flex-col gap-y-3 items-center">
-                            <div className='text-white text-xl'>{weatherData?.name}</div>
+                            <div className='text-white text-xl text-center w-full px-3 py-2'>{weatherData?.name}</div>
                             <div className='text-white'>{date}</div>
                         </div>
                     </>
