@@ -84,8 +84,8 @@ const Home = () => {
 
 
     return (
-        <main className=' w-[35vw] h-[70vh] mx-auto bg-gradient-to-r from-fuchsia-500 to-cyan-500 flex justify-center rounded-xl mt-28'>
-            <article className='mt-10 flex flex-col items-center gap-y-5'>
+        <main className='w-[80vw] lg:w-[35vw] h-[70vh] mx-auto bg-gradient-to-r from-fuchsia-500 to-cyan-500 flex justify-center rounded-xl mt-28'>
+            <article className='mt-10 flex flex-col items-center gap-y-5 w-[80%]'>
                 <form
                     className=' flex'
                     onSubmit={(e) => {
