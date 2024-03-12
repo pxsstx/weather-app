@@ -14,7 +14,7 @@ function getCurrentDate() {
 const Home = () => {
     const date = getCurrentDate();
     const [weatherData, setWeatherData] = useState(null);
-    const [city, setCity] = useState("lahore");
+    const [city, setCity] = useState("thailand");
 
     async function fetchData(cityName) {
         try {
