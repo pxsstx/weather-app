@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { BsCloudDrizzleFill, BsCloudFog2Fill, BsCloudLightningRainFill, BsCloudRainHeavyFill, BsCloudSnowFill, BsCloudSunFill, BsCloudsFill, BsCloudyFill, BsFillCloudSunFill, BsSunFill, BsWind } from "react-icons/bs";
 import { MdWaves } from "react-icons/md";
+import Image from "./components/Image";
 
 function getCurrentDate() {
     const currentDate = new Date();
@@ -54,37 +55,8 @@ const Home = () => {
         }
     }, []);
 
-    let weatherIcon;
-
-    switch (weatherData?.weather[0]?.description) {
-        case "Clear":
-            weatherIcon = <BsSunFill size={200} fill="#fff" />;
-            break;
-        case "drizzle":
-            weatherIcon = <BsCloudDrizzleFill size={200} fill="#fff" />;
-            break;
-        case "Mist":
-            weatherIcon = <BsFillCloudSunFill size={200} fill="#fff" />;
-            break;
-        case "Snow":
-            weatherIcon = <BsCloudSnowFill size={200} fill="#fff" />;
-            break;
-        case "rain":
-            weatherIcon = <BsCloudRainHeavyFill size={200} fill="#fff" />;
-            break;
-        case "fog":
-            weatherIcon = <BsCloudFog2Fill size={200} fill="#fff" />;
-            break;
-        case "light rain":
-            weatherIcon = <BsCloudLightningRainFill size={200} fill="#fff" />;
-            break;
-        default:
-            weatherIcon = <BsCloudsFill size={200} fill="#fff" />;
-    }
-
-
     return (
-        <main className='w-[80vw] lg:w-[35vw] h-[70vh] mx-auto bg-gradient-to-r from-fuchsia-500 to-cyan-500 flex justify-center rounded-xl mt-28'>
+        <main className='w-[80vw] lg:w-[35vw] h-[70vh] mx-auto bg-gradient-to-r from-fuchsia-500 to-cyan-500 flex justify-center rounded-xl lg:mt-28 mt-20'>
             <article className='mt-10 flex flex-col items-center gap-y-5 w-[80%]'>
                 <form
                     className=' flex'
@@ -110,7 +82,7 @@ const Home = () => {
                         <div className='text-center'>
                             <div className='flex flex-col item-center w-full gap-y-5 mt-5'>
                                 <div className='flex item-center w-[200px]'>
-                                    {weatherIcon}
+                                    <Image weatherData={weatherData}/>
                                 </div>
 
                                 <div className='text-white'>
